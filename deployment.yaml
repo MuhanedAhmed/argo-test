@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mohaned-app
+  name: mohaned-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mohaned-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mohaned-app
+    spec:
+      containers:
+      - image:  mohanedahmed/argo-test:1
+        name: mohaned-app
+        imagePullPolicy: Always
+        ports: 
+        - containerPort: 80
