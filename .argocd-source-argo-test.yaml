@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - mohanedahmed/argo-test:2
